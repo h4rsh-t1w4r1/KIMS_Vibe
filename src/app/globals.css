@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Verrolify Custom Base Styles */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-primary text-secondary antialiased;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-wide;
+  }
+
+  h1 {
+    @apply text-display;
+  }
+
+  h2 {
+    @apply text-heading;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-bold tracking-wide;
+  }
+
+  p {
+    @apply text-body-lg text-secondary/90 max-w-measure-lg;
+  }
+
+  /* Focus styles */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-primary;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-accent/20 text-secondary;
+  }
+}
+
+/* Verrolify Custom Component Styles */
+@layer components {
+  /* Button base styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-medium tracking-wide uppercase transition-colors duration-200 ease-out;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-secondary hover:bg-accent/90 active:bg-accent/80;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary/10 text-secondary hover:bg-secondary/20 active:bg-secondary/30;
+  }
+
+  /* Link styles */
+  .link {
+    @apply text-accent hover:text-accent/80 transition-colors duration-200 ease-out;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-primary border border-secondary/10 p-6;
+  }
+
+  /* Section spacing utilities */
+  .section {
+    @apply py-lg md:py-xl;
+  }
+
+  .section-generous {
+    @apply py-xl md:py-2xl;
+  }
+
+  .section-compact {
+    @apply py-md md:py-lg;
+  }
+}
+
+/* Verrolify Custom Utility Styles */
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Motion utilities */
+  .motion-reduce {
+    @apply motion-reduce:transform-none motion-reduce:transition-none;
+  }
+
+  /* Gradient utilities */
+  .bg-gradient-subtle {
+    background: linear-gradient(180deg, var(--tw-gradient-from), var(--tw-gradient-to));
+  }
+}
