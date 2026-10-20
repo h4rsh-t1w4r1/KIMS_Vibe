@@ -1,4 +1,6 @@
-import { Suspense } from 'react';
+'use client';
+
+import { motion, Suspense } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/Reveal';
